@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
- [`Live Demo:`] (https://gp-offer.netlify.app/).
+ [`Live Demo:`](https://gp-offer.netlify.app/).
 
 ## Getting Started
 
