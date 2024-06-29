@@ -43,7 +43,11 @@ export default function Home() {
         selectedMinutes: response2.data.voice,
         selectedBioscope: response2.data.bioscope,
         selectedSms: response2.data.sms,
-        enableMinutes: response3.data.day_1.voice,
+        enableMinutesDay1: response3.data.day_1.voice,
+        enableMinutesDay3: response3.data.day_3.voice,
+        enableMinutesDay7: response3.data.day_7.voice,
+        enableMinutesDay15: response3.data.day_15.voice,
+        enableMinutesDay30: response3.data.day_30.voice,
       });
     } catch (error) {
       console.log(error);
@@ -55,13 +59,6 @@ export default function Home() {
   }, []);
 
   const handleSelection = (key, value) => {
-    console.log("23444", key, value);
-    if (value == 1) {
-      <ValidityComponent
-        bubbleData={bubbleData}
-        handleSelection={handleSelection}
-      />;
-    }
     setBubbleData((prevState) => ({
       ...prevState,
       [key]: value,
@@ -93,6 +90,7 @@ export default function Home() {
       <MinuteComponent
         bubbleData={bubbleData}
         handleSelection={handleSelection}
+        selectedValidity={bubbleData.selectedValidity}
       />
 
       <BioscopeComponent

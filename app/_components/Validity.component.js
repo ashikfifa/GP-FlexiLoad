@@ -2,7 +2,7 @@ import React from "react";
 
 const ValidityComponent = (props) => {
   const { bubbleData, handleSelection } = props;
-console.log('5657567', bubbleData.enableMinutes);
+
   return (
     <div className="flex  items-center gap-40 my-7 border-b-[1px] border-gray-200">
       <div>
