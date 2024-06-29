@@ -48,6 +48,12 @@ export default function Home() {
         enableMinutesDay7: response3.data.day_7.voice,
         enableMinutesDay15: response3.data.day_15.voice,
         enableMinutesDay30: response3.data.day_30.voice,
+
+        enableSmsDay1: response3.data.day_1.sms,
+        enableSmsDay3: response3.data.day_3.sms,
+        enableSmsDay7: response3.data.day_7.sms,
+        enableSmsDay15: response3.data.day_15.sms,
+        enableSmsDay30: response3.data.day_30.sms,
       });
     } catch (error) {
       console.log(error);
@@ -98,7 +104,7 @@ export default function Home() {
         handleSelection={handleSelection}
       />
 
-      <SmsComponent bubbleData={bubbleData} handleSelection={handleSelection} />
+      <SmsComponent bubbleData={bubbleData} handleSelection={handleSelection} selectedValidity={bubbleData.selectedValidity} />
     </main>
   );
 }
